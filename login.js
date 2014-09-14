@@ -40,11 +40,12 @@ Login.prototype.login = function(_name, _email) {
 /**
  * Logout from the server
  */ 
+
 Login.prototype.logout = function(sessionId) {
-	console.log('logout::' + sessionId);
-   /*
-	* TODO: Remove the given sessionId from the sessionMap
-	*/
+        console.log("DELETE:: Logout from the server");
+ 	// TODO: remove session id via login.logout(xxx)
+ 	delete this.sessionMap[sessionId];
+  	console.log('Logged out from the server\n');
 };
 
 // Export the Login class
